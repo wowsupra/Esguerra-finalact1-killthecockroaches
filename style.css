@@ -1,0 +1,157 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#game-container {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  cursor: url('slipper.png'), auto;
+}
+
+#cockroach-area {
+  position: relative;
+  width: 90%;
+  height: 600px;
+  background: url('cock-bg.png') no-repeat center center;
+  background-size: cover;
+  margin: 20px auto;
+  border: 2px solid #34495e;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: url('slipper.png'), auto;
+}
+
+.cockroach {
+  width: 80px;
+  height: 130px;
+  position: absolute;
+  background: url('cockroach.png') no-repeat center center;
+  background-size: cover;
+  transition: transform 0.2s ease;
+  cursor: url('slipper.png'), auto;
+}
+
+.cockroach:hover {
+  transform: scale(1.1);
+}
+
+.dead {
+  background: url('dead-cockroach.png') no-repeat center center;
+  background-size: cover;
+  transform: scale(0.9);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  color: #fff;
+}
+
+#start-popup h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#start-popup p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#start-btn {
+  padding: 15px 30px;
+  font-size: 1.3em;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#start-btn:hover {
+  background: #219653;
+  transform: scale(1.05);
+}
+
+.popup-content {
+  background: transparent;
+  padding: 0;
+}
+
+#game-over-popup.popup {
+  background: rgba(44, 62, 80, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+#game-over-popup h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#game-over-popup button {
+  margin-top: 20px;
+  background: #f7c900;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#game-over-popup button:hover {
+  background: #f7c900;
+  transform: translateY(-2px);
+}
+
+#mute-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #3498db;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#mute-btn:hover {
+  background: #2980b9;
+}
+
+#score, #timer {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
+}
